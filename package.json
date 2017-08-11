@@ -1,0 +1,28 @@
+{
+  "name": "tree-front",
+  "version": "1.0.0",
+  "description": "front end for tree",
+  "private": true,
+  "main": "src/entry.js",
+  "scripts": {
+    "test": "exit 0",
+    "build": "webpack --watch"
+  },
+  "keywords": [],
+  "author": "yuji",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "css-loader": "^0.26.1",
+    "file-loader": "^0.9.0",
+    "style-loader": "^0.13.1",
+    "vue-loader": "^10.0.2",
+    "vue-template-compiler": "^2.1.8",
+    "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "vue": "^2.1.8"
+  }
+}
