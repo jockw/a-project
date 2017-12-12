@@ -9,6 +9,9 @@ module.exports = {
         path: path.join(__dirname, 'assets'),
         filename: 'app.bundle.js',
     },
+    externals: {
+        jquery: '$',
+    },
     module: {
         loaders: [
             {
