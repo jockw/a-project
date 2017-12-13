@@ -1,31 +1,18 @@
 <template>
-  <div :class='$style.contain'>
+  <div :class='styles.contain'>
     <el-menu
       default-active="1"
       class="el-menu-demo"
       mode="horizontal"
       text-color="#fff"
       background-color="#545c64"
+      separator="/"
+      router
     >
-      <el-menu-item index="1">产品</el-menu-item>
-      <el-submenu index="2">
-        <template slot="title">解决方案</template>
-        <el-menu-item index="2-1">选项1</el-menu-item>
-        <el-menu-item index="2-2">选项2</el-menu-item>
-        <el-menu-item index="2-3">选项3</el-menu-item>
-      </el-submenu>
-      <el-submenu index="3">
-        <template slot="title">服务与支持</template>
-        <el-menu-item index="3-1">选项1</el-menu-item>
-        <el-menu-item index="3-2">选项2</el-menu-item>
-        <el-menu-item index="3-3">选项3</el-menu-item>
-      </el-submenu>
-      <el-submenu index="4">
-        <template slot="title">关于老五</template>
-        <el-menu-item index="4-1">选项1</el-menu-item>
-        <el-menu-item index="4-2">选项2</el-menu-item>
-        <el-menu-item index="4-3">选项3</el-menu-item>
-      </el-submenu>
+      <el-menu-item index="/home">公司产品</el-menu-item>
+      <el-menu-item index="/brand">适配品牌</el-menu-item>
+      <el-menu-item index="3"><router-link to="/brand">服务与支持</router-link></el-menu-item>
+      <el-menu-item index="/about">关于老五</el-menu-item>
       <el-submenu index="5">
         <template slot="title">联系我们</template>
         <el-menu-item index="5-1">选项1</el-menu-item>
@@ -87,16 +74,22 @@
     },
     methods: {
       onresize: function () {
-        this.oHeight = window.innerHeight - 201;
+        this.oHeight = window.innerHeight - 200;
       }
     },
     beforeDestroy(){
       $(window).off('resize', this.onresize);
     },
+
   }
 </script>
 
 <style module>
+  .content{
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
   .foot {
     height: 140px;
     background: #2F4056;

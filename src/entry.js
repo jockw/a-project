@@ -5,18 +5,19 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './app.vue';
 import test1 from './component/test1';
-import test2 from './component/test2';
+import notfound from './component/test2';
 import Element from 'element-ui';
 import routetest from './router';
 
 Vue.use(Element);
 Vue.use(VueRouter);
-console.log(routetest)
 const routes = [
   { path: '/test1', component: test1 },
-	{ path: '/test2', component: test2 }
+	...routetest,
+  { path: '/404', component: notfound },
 ]
 
+console.log(routetest)
 
 const router =new VueRouter({
 	routes,

@@ -8,7 +8,13 @@
 </template>
 
 <script>
-  export default {}
+  export default {
+    computed: {
+      styles() {
+        return this.$style;
+      }
+    },
+  }
 </script>
 
 <style moudle>

@@ -6,7 +6,7 @@
   "main": "src/entry.js",
   "scripts": {
     "test": "exit 0",
-    "build": "webpack --watch"
+    "build": "webpack"
   },
   "keywords": [],
   "author": "yuji",
